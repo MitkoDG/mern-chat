@@ -1,11 +1,12 @@
 {
-  "name": "server",
+  "name": "mern-chat",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "server": "node server/server.js"
+    "server": "nodemon server/server.js"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
