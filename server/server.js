@@ -5,7 +5,7 @@ import authRoutes from "./routes/auth.js"
 
 const app = express();
 
-const result = dotenv.config({ path: "../.env" });
+const result = dotenv.config({ path: ".env" }); // need to be fixed
 
 if (result.error) {
     console.error("Error loading .env file:", result.error);
