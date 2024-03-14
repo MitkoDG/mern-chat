@@ -1,5 +1,5 @@
 import { json } from "express";
-import User from "../models/user.model";
+import User from "../models/user.model.js";
 
 export const signup = async (req, res) => {
     try {
@@ -23,7 +23,7 @@ export const signup = async (req, res) => {
         const girlProfilPic = `https://avatar.iran.liara.run/public/girl?username=${username}`
 
         const newUser = new User({
-            fullName,
+            fullname,
             username,
             password,
             gender,
