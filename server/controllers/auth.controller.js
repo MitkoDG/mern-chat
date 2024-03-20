@@ -1,10 +1,9 @@
-import { json } from "express";
-import User from "../models/user.model.js";
 import bcrypt from "bcryptjs"
+import User from "../models/user.model.js";
 
 export const signup = async (req, res) => {
     try {
-        const { fullname, username, password, confirmPassword, gender } = req.body;
+        const { fullName, username, password, confirmPassword, gender } = req.body;
 
         if (password !== confirmPassword) {
             return res.status(400).json({ error: "Passwords don`t match" })
@@ -25,7 +24,7 @@ export const signup = async (req, res) => {
         const girlProfilPic = `https://avatar.iran.liara.run/public/girl?username=${username}`
 
         const newUser = new User({
-            fullname,
+            fullName,
             username,
             password: hashedPassword,
             gender,
